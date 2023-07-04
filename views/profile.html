@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Profile</title>
+    <link rel="stylesheet" href="../../css/normalize.css" />
+    <link rel="stylesheet" href="../../assets/fonts/fontawesome-5.7.2/css/all.min.css" />
+    <link rel="stylesheet" href=../../css/simplebar.min.css" />
+    <link rel="stylesheet" href="../../css/holter-style.css" />
+    <link rel="stylesheet" href="../../css/layout-tools.css" />
+    <link rel="stylesheet" href="../../css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../../css/bootstrap-grid.min.css" />
+    <link rel="stylesheet" href="../../css/bootstrap-reboot.min.css" />
+    <link rel="stylesheet" href="sweetalert2.min.css">
+</head>
+
+<body class="">
+    <div class="main-wrapper">
+        <header id="holter-header" class="holter-header">
+            <div class="holter-header__title">
+                <span id="menu-sw" class="holter-header__menu-sw"><i class="fas fa-bars"></i></span>
+                <span class="hidable">Bienvenido
+                    <span id="user-name" class="holter-header__user-name">Joel Montalvo</span></span>
+                <span class="holter-header__holter-label">HOLTER</span>
+            </div>
+            <div class="holter-header__menu-options">
+                <ul class="holter-header__options-ul">
+                    <li id="holter-user-sw" class="holter-header__options-li">
+                        <a href="#"><i class="fas fa-user"></i></a>
+                        <div id="holter-user" class="holter-user hide">
+                            <img class="holter-user__photo" src="http://lorempixel.com/400/400/people/" alt="" />
+                            <h3 class="holter-user__name">Joel Montalvo</h3>
+                            <h3 class="holter-user__info">joel@gmail.com</h3>
+                            <ul class="holter-user__menu">
+                                <li class="holter-user__li">
+                                    <i class="fas fa-user"></i>
+                                    <a href="#">Perfil de Usuario</a>
+                                </li>
+                                <li class="holter-user__li">
+                                    <i class="fas fa-sign-out-alt"></i>
+                                    <a href="index.html">Cerrar sesión</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+
+
+                </ul>
+            </div>
+        </header>
+        <div class="body-container" data-simplebar>
+            <div id="main-flex-wrapper" class="main-flex-wrapper shared">
+                <div id="main-card" class="card">
+                    <div class="card__header">
+                        <h2 class="card__title">Mis datos personales</h2>
+
+                    </div>
+                    <div class="card__body">
+                        <form class="form-row">
+                            <div class="col-6">
+                                <div class="input-wrapper">
+                                    <span class="input-wrapper__icon"><i class="fas fa-user"></i></span>
+                                    <input class="input-wrapper__input" type="text" placeholder="Nombre" />
+                                </div>
+                                <div class="input-wrapper">
+                                    <span class="input-wrapper__icon"><i class="fas fa-user"></i></span>
+                                    <input class="input-wrapper__input" type="text" placeholder="Apellido" />
+                                </div>
+                                <div class="input-wrapper">
+                                    <span class="input-wrapper__icon"><i class="fas fa-id-card"></i></span>
+                                    <select name="" id="supplier" class="input-wrapper__input">
+                                        <option value="NONE">Tipo de Identificación</option>
+                                        <option value="1">CC</option>
+                                        <option value="2">TI</option>
+                                        <option value="3">NIT</option>
+                                    </select>
+                                </div>
+                                <div class="input-wrapper">
+                                    <span class="input-wrapper__icon"><i class="fas fa-id-card"></i></span>
+                                    <input class="input-wrapper__input" type="text" placeholder="Identificación" />
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="input-wrapper">
+                                    <span class="input-wrapper__icon"><i class="fas fa-envelope"></i></span>
+                                    <input class="input-wrapper__input" type="email" placeholder="Correo Electrónico" />
+                                </div>
+
+                                <div class="input-wrapper">
+                                    <span class="input-wrapper__icon"><i class="fas fa-phone"></i></span>
+                                    <input class="input-wrapper__input" type="tel" placeholder="Teléfono" />
+                                </div>
+
+                                <div class="input-wrapper">
+                                    <span class="input-wrapper__icon"><i class="fas fa-map-marker-alt"></i></span>
+                                    <input class="input-wrapper__input" type="text" placeholder="Dirección" />
+                                </div>
+                            </div>
+
+
+
+                            <div class="form-actions w-100 ta-right">
+
+                                <button id="update-profile" type="button" class="holter-btn">Actualizar datos</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div id="side-card" class="card ml-20 col-5">
+                    <div class="card__header">
+                        <h2 class="card__title">Cambiar contraseña</h2>
+
+                    </div>
+                    <div class="card__body">
+                        <form>
+                            <div class="input-wrapper">
+                                <span class="input-wrapper__icon"><i class="fas fa-key"></i></span>
+                                <input class="input-wrapper__input" type="email" placeholder="Contraseña actual" />
+                            </div>
+
+                            <div class="input-wrapper">
+                                <span class="input-wrapper__icon"><i class="fas fa-key"></i></span>
+                                <input class="input-wrapper__input" type="tel" placeholder="Nueva contraseña" />
+                            </div>
+
+                            <div class="input-wrapper">
+                                <span class="input-wrapper__icon"><i class="fas fa-key"></i></span>
+                                <input class="input-wrapper__input" type="text"
+                                    placeholder="Repita la nueva contraseña" />
+                            </div>
+
+                            <div class="form-actions ta-right">
+                                <button type="button" class="holter-btn btn-primary">
+                                    Cambiar contraseña
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div id="sidebar" class="sidebar">
+        <div class="sidebar__header">
+            <span class="sidebar__header__user-rol">IPS SALUD <i class="fas fa-caret-right"></i></span>
+        </div>
+        <div class="sidebar__menu">
+            <div class="sidebar__menu-set">
+                <ul class="sidebar__menu-set-ul">
+                    <li class="sidebar__menu-set-li">
+                        <a href="#"><i class="fas fa-home"></i>Inicio</a>
+                    </li>
+                    <li class="sidebar__menu-set-li ">
+                        <a href="index.html"><i class="fas fa-list-ul"></i>Enviar solicitudes</a>
+                    </li>
+                    <li class="sidebar__menu-set-li ">
+                        <a href="admin-order.html"><i class="fas fa-list-ul"></i>Administrar solicitudes</a>
+                    </li>
+                </ul>
+            </div>
+
+
+        </div>
+        <div class="sidebar__brand-container">
+            <div class="sidebar__copy">
+                Copyright &copy; 2023
+                <br />
+                Desarrollado por <span>Elias Colón</span>
+            </div>
+        </div>
+    </div>
+    <script src="../../js/jquery-3.6.4.min.js"></script>
+    <script src="../../js/sweetalert2@11"></script>
+    <script src="../../js/main.js"></script>
+    <script src="../../js//simplebar.js"></script>
+    <script src="../../js/rs-validator.js"></script>
+    <script src="../../js/request-manager.js"></script>
+    <script src="../../js/bootstrap.bundle.min.js"></script>
+    <script src="../../js/bootstrap.min.js"></script>
+
+
+
+</body>
+
+</html>

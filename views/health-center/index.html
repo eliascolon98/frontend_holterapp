@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Holter</title>
+    <link rel="stylesheet" href="../../css/normalize.css" />
+    <link rel="stylesheet" href="../../assets/fonts/fontawesome-5.7.2/css/all.min.css" />
+    <link rel="stylesheet" href=../../css/simplebar.min.css" />
+    <link rel="stylesheet" href="../../css/holter-style.css" />
+    <link rel="stylesheet" href="../../css/layout-tools.css" />
+    <link rel="stylesheet" href="../../css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../../css/bootstrap-grid.min.css" />
+    <link rel="stylesheet" href="../../css/bootstrap-reboot.min.css" />
+    <link rel="stylesheet" href="sweetalert2.min.css">
+</head>
+
+<body class="">
+    <div class="main-wrapper">
+        <header id="holter-header" class="holter-header">
+            <div class="holter-header__title">
+                <span id="menu-sw" class="holter-header__menu-sw"><i class="fas fa-bars"></i></span>
+                <span class="hidable">Bienvenido
+                    <span id="user-name" class="holter-header__user-name">Joel Montalvo</span></span>
+                <span class="holter-header__holter-label">Holter</span>
+            </div>
+            <div class="holter-header__menu-options">
+                <ul class="holter-header__options-ul">
+                    <li id="holter-user-sw" class="holter-header__options-li">
+                        <a href="#"><i class="fas fa-user"></i></a>
+                        <div id="holter-user" class="holter-user hide">
+                            <img class="holter-user__photo" src="http://lorempixel.com/400/400/people/" alt="" />
+                            <h3 class="holter-user__name">Joel Montalvo</h3>
+                            <h3 class="holter-user__info">joelm@gmail.com</h3>
+                            <ul class="holter-user__menu">
+                                <li class="holter-user__li">
+                                    <i class="fas fa-user"></i>
+                                    <a href="../profile.html">Perfil de Usuario</a>
+                                </li>
+                                <li class="holter-user__li">
+                                    <i class="fas fa-sign-out-alt"></i>
+                                    <a href="../login.html">Cerrar sesión</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+
+
+                </ul>
+            </div>
+        </header>
+        <div class="body-container" data-simplebar>
+            <div id="main-flex-wrapper" class="full-main vertical-cards-wrapper">
+                <div id="solicitudes" class="card fade-animation  ">
+                    <div class="card__header">
+                        <h2 class="card__title">Solicitudes</h2>
+                        <ul class="card__actions">
+                            <li id="new-request" class="card__btn-action">
+                                <i class="fas fa-plus-circle"></i>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="card__body">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Fecha</th>
+                                    <th>Hora</th>
+                                    <th>Paciente</th>
+                                    <th>Dirección</th>
+                                    <th>Estado</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="">
+                                    <td>05/07/2023</td>
+                                    <td>02:45 AM</td>
+                                    <td>Elias Colon</td>
+                                    <td>C6678 // 2865 – 1215</td>
+                                    <td><i class="fas fa-hourglass-half"></i> Por instalar</td>
+                                    <td>
+                                        <span id="detail-1"><i class="fas fa-eye"></i></span>
+                                        <span id="update-patient"><i class="fas fa-pencil-alt"></i></span>
+                                        <span id="delete-patient"><i class="fas fa-trash-alt"></i></span>
+                                    </td>
+                                </tr>
+
+
+                                <tr class="">
+                                    <td>05/07/2023</td>
+                                    <td>08:20 PM</td>
+                                    <td>Ana Maria</td>
+                                    <td>C6678 // 2865 – 1215</td>
+                                    <td><i class="fas fa-hourglass-half"></i> Por instalar</td>
+                                    <td>
+                                        <span><i class="fas fa-eye"></i></span>
+                                        <span><i class="fas fa-pencil-alt"></i></span>
+                                        <span><i class="fas fa-trash-alt"></i></span>
+                                    </td>
+                                </tr>
+                                <tr class="">
+                                    <td>05/07/2023</td>
+                                    <td>08:20 PM</td>
+                                    <td>Joel Montalvo</td>
+                                    <td>C6678 // 2865 – 1215</td>
+                                    <td><i class="fas fa-hourglass-half"></i> Por instalar</td>
+                                    <td>
+                                        <span><i class="fas fa-eye"></i></span>
+                                        <span><i class="fas fa-pencil-alt"></i></span>
+                                        <span><i class="fas fa-trash-alt"></i></span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="form-actions ta-right">
+                        <button id="send-request" type="button" class="holter-btn">Enviar orden</button>
+                    </div>
+                </div>
+
+                <div id="detalle-solicitud" class="card fade-animation fade-hide-animation hide">
+                    <div class="card__header">
+                        <h2 class="card__title">Solicitud: Elias Colon</h2>
+                        <ul class="card__actions">
+
+                            <li id="close-details" class="card__btn-action">
+                                <i class="fas fa-times-circle"></i>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="card__body">
+                        <div class="fluid-container">
+                            <div class="col-md-4  col-6 pd-10">
+
+                                <p>
+                                    <span class="holter-emphasis">Tipo de Identificación: </span>
+                                    CC
+                                </p>
+                                <p><span class="holter-emphasis">Identificación: </span>
+                                    1000249494
+                                </p>
+                                <p><span class="holter-emphasis">Correo eectrónico: </span>
+                                    eliascolon98@gmail.com
+                                </p>
+                                <p><span class="holter-emphasis">Teléfono: </span>
+                                    385466115
+                                </p>
+                                <p><span class="holter-emphasis">Dirección: </span>
+                                    Calle 22 # 48-20
+                                </p>
+                                <p><span class="holter-emphasis">EPS: </span>
+                                    Sanitas
+                                </p>
+                            </div>
+                            <div class="col-md-4  col-6 pd-10">
+
+                                <p>
+                                    <a href=""><i class="fas fa-file-download"></i> Copia de cédula</a>
+                                </p>
+                                <p>
+                                    <a href=""><i class="fas fa-file-download"></i> Autorización de la EPS</a>
+                                </p>
+                                <p>
+                                    <a href=""><i class="fas fa-file-download"></i> Orden médica</a>
+                                </p>
+                                <p><span class="holter-emphasis">Tipo de estudio: </span>
+                                    xxxxxxx
+                                </p>
+                                <p><span class="holter-emphasis">Tipo de consulta: </span>
+                                    xxxxxx
+                                </p>
+                                <p><span class="holter-emphasis">Fecha de visita: </span>
+                                    05/07/2019 08:00 AM
+                                </p>
+
+                            </div>
+                            <div class="col-md-4  col-12 pd-10">
+                                <p><span class="holter-emphasis">Prioridad: </span>
+                                    Alta
+                                </p>
+                                <p>
+                                    <span class="holter-emphasis">Observaciones:<br /></span>
+                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt, quaerat quas? Fuga,
+                                    nemo et officiis voluptatum maxime repellat harum impedit quaerat ab esse
+                                    repudiandae vel amet qui molestias laboriosam est!
+                                </p>
+                            </div>
+                        </div>
+                        <div class="fluid-container">
+                            <div class="col-12">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Inicio</th>
+                                            <th>Final</th>
+                                            <th>Tecnico</th>
+                                            <th>Holter</th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="">
+                                            <td>05/07/2019 02:45 AM</td>
+                                            <td>05/07/2019 08:00 AM</td>
+                                            <td>Juan</td>
+                                            <td>xx3enk</td>
+                                            <td><i class="far fa-check-circle"></i></td>
+                                        </tr>
+                                        <tr class="">
+                                            <td>05/07/2019 02:45 AM</td>
+                                            <td>05/07/2019 08:00 AM</td>
+                                            <td>Juan</td>
+                                            <td>xx3enk</td>
+                                            <td><i class="far fa-check-circle"></i></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="nueva-solicitud" class="card fade-animation fade-hide-animation hide">
+                    <div class="card__header">
+                        <h2 class="card__title">Nueva Solicitud:</h2>
+                        <ul class="card__actions">
+                            <li id="close-new-request" class="card__btn-action">
+                                <i class="fas fa-times-circle"></i>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="card__body">
+                        <div class="fluid-container">
+                            <div class="col-md-4 col-12 pd-10">
+                                <div class="input-wrapper">
+                                    <span class="input-wrapper__icon"><i class="fas fa-user"></i></span>
+                                    <input class="input-wrapper__input" type="text" placeholder="Nombre" />
+                                </div>
+                                <div class="input-wrapper">
+                                    <span class="input-wrapper__icon"><i class="fas fa-id-card"></i></span>
+                                    <select name="" id="supplier" class="input-wrapper__input">
+                                        <option value="NONE">Tipo de Identificación</option>
+                                        <option value="1">CC</option>
+                                        <option value="2">TI</option>
+                                        <option value="3">NIT</option>
+                                    </select>
+                                </div>
+                                <div class="input-wrapper">
+                                    <span class="input-wrapper__icon"><i class="fas fa-id-card"></i></span>
+                                    <input class="input-wrapper__input" type="text" placeholder="Identificación" />
+                                </div>
+                                <div class="input-wrapper">
+                                    <span class="input-wrapper__icon"><i class="fas fa-envelope"></i></span>
+                                    <input class="input-wrapper__input" type="email" placeholder="Correo Electrónico" />
+                                </div>
+                                <div class="input-wrapper">
+                                    <span class="input-wrapper__icon"><i class="fas fa-phone"></i></span>
+                                    <input class="input-wrapper__input" type="tel" placeholder="Teléfono" />
+                                </div>
+
+                                <div class="input-wrapper">
+                                    <span class="input-wrapper__icon"><i class="fas fa-map-marker-alt"></i></span>
+                                    <input class="input-wrapper__input" type="text" placeholder="Dirección" />
+                                </div>
+                                <div class="input-wrapper">
+                                    <span class="input-wrapper__icon"><i class="fas fa-file-medical"></i></span>
+
+                                    <select name="" id="supplier" class="input-wrapper__input">
+                                        <option value="NONE">EPS</option>
+                                        <option value="1">salucop</option>
+                                        <option value="2">saludtotal</option>
+                                        <option value="3">saludvida</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-12 pd-10">
+
+                                <div class="input-wrapper">
+                                    <div class="file-upload">
+                                        <div class="file-upload-select">
+                                            <div class="file-select-button">Copía de cédula</div>
+                                            <div class="file-select-name">Sin seleccionar...</div>
+                                            <input type="file" name="file-upload-input" id="file-upload-input">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="input-wrapper">
+                                    <div class="file-upload">
+                                        <div class="file-upload-select">
+                                            <div class="file-select-button">Autorización de la EPS</div>
+                                            <div class="file-select-name">Sin seleccionar...</div>
+                                            <input type="file" name="file-upload-input" id="file-upload-input">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="input-wrapper">
+                                    <div class="file-upload">
+                                        <div class="file-upload-select">
+                                            <div class="file-select-button">Orden médica</div>
+                                            <div class="file-select-name">Sin seleccionar...</div>
+                                            <input type="file" name="file-upload-input" id="file-upload-input">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="input-wrapper">
+                                    <span class="input-wrapper__icon"><i class="fas fa-file-medical"></i></span>
+
+                                    <select name="" id="supplier" class="input-wrapper__input">
+                                        <option value="NONE">Tipo de estudio</option>
+                                        <option value="1">Holter</option>
+                                        <option value="2">Mapa</option>
+
+                                    </select>
+                                </div>
+                                <div class="input-wrapper">
+                                    <span class="input-wrapper__icon"><i class="fas fa-file-medical"></i></span>
+
+                                    <select name="" id="supplier" class="input-wrapper__input">
+                                        <option value="NONE">Tipo de consulta</option>
+                                        <option value="1">Ambulatorio</option>
+                                        <option value="2">Hospitalario</option>
+
+                                    </select>
+                                </div>
+                                <div class="form-field ">
+                                    <label for="final-date">Fecha de visita:</label>
+
+                                    <div class="input-wrapper mt-10">
+                                        <span class="input-wrapper__icon"><i class="far fa-calendar-check"></i></span>
+                                        <input id="final-date" class="input-wrapper__input" type="date"
+                                            placeholder="Fecha final ">
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="col-md-4 col-12 pd-10">
+                                <div class="input-wrapper">
+                                    <span class="input-wrapper__icon"><i class="fas fa-file-medical"></i></span>
+
+                                    <select name="" id="supplier" class="input-wrapper__input">
+                                        <option value="NONE">Prioridad</option>
+                                        <option value="1">Alta</option>
+                                        <option value="2">Media</option>
+                                        <option value="3">Baja</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <span class="holter-primary-text">Observaciones:</span>
+                                </div>
+                                <textarea name="" id="" cols="45" rows="9" class="mt-10"
+                                    placeholder="Escriba las observaciones que considere necesario anotar."></textarea>
+                            </div>
+                        </div>
+
+                        <div class="form-actions ta-right">
+                            <button id="save-request" type="button" class="holter-btn">Guardar</button>
+                        </div>
+                    </div>
+                </div>
+                <div id="actualizar-solicitud" class="card fade-animation fade-hide-animation hide">
+                    <div class="card__header">
+                        <h2 class="card__title">Nueva Solicitud:</h2>
+                        <ul class="card__actions">
+                            <li id="close-new-request-2" class="card__btn-action">
+                                <i class="fas fa-times-circle"></i>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="card__body">
+                        <div class="fluid-container">
+                            <div class="col-md-4 col-12 pd-10">
+                                <div class="input-wrapper">
+                                    <span class="input-wrapper__icon"><i class="fas fa-user"></i></span>
+                                    <input class="input-wrapper__input" type="text" value="Elias" />
+                                </div>
+                                <div class="input-wrapper">
+                                    <span class="input-wrapper__icon"><i class="fas fa-id-card"></i></span>
+                                    <select name="" id="supplier" class="input-wrapper__input">
+                                        <option value="NONE">Tipo de Identificación</option>
+                                        <option value="1" selected>CC</option>
+                                        <option value="2">TI</option>
+                                        <option value="3">NIT</option>
+                                    </select>
+                                </div>
+                                <div class="input-wrapper">
+                                    <span class="input-wrapper__icon"><i class="fas fa-id-card"></i></span>
+                                    <input class="input-wrapper__input" type="text" value="100248484" />
+                                </div>
+                                <div class="input-wrapper">
+                                    <span class="input-wrapper__icon"><i class="fas fa-envelope"></i></span>
+                                    <input class="input-wrapper__input" type="email" value="eliascolon98@gmail.com" />
+                                </div>
+                                <div class="input-wrapper">
+                                    <span class="input-wrapper__icon"><i class="fas fa-phone"></i></span>
+                                    <input class="input-wrapper__input" type="tel" value="3007880154" />
+                                </div>
+
+                                <div class="input-wrapper">
+                                    <span class="input-wrapper__icon"><i class="fas fa-map-marker-alt"></i></span>
+                                    <input class="input-wrapper__input" type="text" placeholder="Calle 22" />
+                                </div>
+                                <div class="input-wrapper">
+                                    <span class="input-wrapper__icon"><i class="fas fa-file-medical"></i></span>
+
+                                    <select name="" id="supplier" class="input-wrapper__input">
+                                        <option value="NONE">EPS</option>
+                                        <option value="1" selected>salucop</option>
+                                        <option value="2">saludtotal</option>
+                                        <option value="3">saludvida</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-4 col-12 pd-10">
+
+                                <div class="input-wrapper">
+                                    <div class="file-upload">
+                                        <div class="file-upload-select">
+                                            <div class="file-select-button">Copía de cédula</div>
+                                            <div class="file-select-name">xxxxx</div>
+                                            <input type="file" name="file-upload-input" id="file-upload-input">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="input-wrapper">
+                                    <div class="file-upload">
+                                        <div class="file-upload-select">
+                                            <div class="file-select-button">Autorización de la EPS</div>
+                                            <div class="file-select-name">xxxx</div>
+                                            <input type="file" name="file-upload-input" id="file-upload-input">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="input-wrapper">
+                                    <div class="file-upload">
+                                        <div class="file-upload-select">
+                                            <div class="file-select-button">Orden médica</div>
+                                            <div class="file-select-name">xxxxx.</div>
+                                            <input type="file" name="file-upload-input" id="file-upload-input">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="input-wrapper">
+                                    <span class="input-wrapper__icon"><i class="fas fa-file-medical"></i></span>
+
+                                    <select name="" id="supplier" class="input-wrapper__input">
+                                        <option value="NONE">Tipo de estudio</option>
+                                        <option value="1" selected>xx</option>
+                                        <option value="2">xx</option>
+                                        <option value="3">xxx</option>
+                                    </select>
+                                </div>
+                                <div class="input-wrapper">
+                                    <span class="input-wrapper__icon"><i class="fas fa-file-medical"></i></span>
+
+                                    <select name="" id="supplier" class="input-wrapper__input">
+                                        <option value="NONE">Tipo de consulta</option>
+                                        <option value="1" selected>xxxx</option>
+                                        <option value="2">x</option>
+                                        <option value="3">xxxx</option>
+                                    </select>
+                                </div>
+                                <div class="form-field ">
+                                    <label for="final-date">Fecha de visita:</label>
+
+                                    <div class="input-wrapper mt-10">
+                                        <span class="input-wrapper__icon"><i class="far fa-calendar-check"></i></span>
+                                        <input id="final-date" class="input-wrapper__input" type="date"
+                                            placeholder="Fecha final ">
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="col-md-4 col-12 pd-10">
+                                <div class="input-wrapper">
+                                    <span class="input-wrapper__icon"><i class="fas fa-file-medical"></i></span>
+
+                                    <select name="" id="supplier" class="input-wrapper__input">
+                                        <option value="NONE">Prioridad</option>
+                                        <option value="1" selected>Alta</option>
+                                        <option value="2">Media</option>
+                                        <option value="3">Baja</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <span class="holter-primary-text">Observaciones:</span>
+                                </div>
+                                <textarea name="" id="" cols="45" rows="9" class="mt-10"
+                                    placeholder="Escriba las observaciones que considere necesario anotar.">Pruebas</textarea>
+                            </div>
+                        </div>
+
+                        <div class="form-actions ta-right">
+                            <button id="update-request" type="button" class="holter-btn">Actualizar datos</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="sidebar" class="sidebar">
+        <div class="sidebar__header">
+            <span class="sidebar__header__user-rol">IPS SALUD <i class="fas fa-caret-right"></i></span>
+        </div>
+        <div class="sidebar__menu">
+            <div class="sidebar__menu-set">
+                <ul class="sidebar__menu-set-ul">
+                    <li class="sidebar__menu-set-li">
+                        <a href="#"><i class="fas fa-home"></i>Inicio</a>
+                    </li>
+                    <li class="sidebar__menu-set-li sidebar__menu-set-li--active">
+                        <a href="index.html"><i class="fas fa-list-ul"></i>Enviar solicitudes</a>
+                    </li>
+                    <li class="sidebar__menu-set-li ">
+                        <a href="admin-order.html"><i class="fas fa-list-ul"></i>Administrar solicitudes</a>
+                    </li>
+                </ul>
+            </div>
+
+
+        </div>
+        <div class="sidebar__brand-container">
+            <div class="sidebar__copy">
+                Copyright &copy; 2023
+                <br />
+                Desarrollado por <span>Elias Colón</span>
+            </div>
+        </div>
+    </div>
+    <script src="../../js/jquery-3.6.4.min.js"></script>
+    <script src="../../js/main.js"></script>
+    <script src="../../js//simplebar.js"></script>
+    <script src="../../js/rs-validator.js"></script>
+    <script src="../../js/request-manager.js"></script>
+    <script src="../../js/sweetalert2@11.js"></script>
+    <script src="../../js/bootstrap.bundle.min.js"></script>
+    <script src="../../js/bootstrap.min.js"></script>
+
+
+
+</body>
+
+</html>

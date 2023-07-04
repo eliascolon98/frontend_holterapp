@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Holter</title>
+    <link rel="stylesheet" href="../../css/normalize.css" />
+    <link rel="stylesheet" href="../../assets/fonts/fontawesome-5.7.2/css/all.min.css" />
+    <link rel="stylesheet" href=../../css/simplebar.min.css" />
+    <link rel="stylesheet" href="../../css/holter-style.css" />
+    <link rel="stylesheet" href="../../css/layout-tools.css" />
+    <link rel="stylesheet" href="../../css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../../css/bootstrap-grid.min.css" />
+    <link rel="stylesheet" href="../../css/bootstrap-reboot.min.css" />
+    <link rel="stylesheet" href="sweetalert2.min.css">
+    <script src="https://kit.fontawesome.com/9cd5073826.js"></script>
+
+</head>
+
+<body class="">
+    <div class="main-wrapper">
+        <header id="holter-header" class="holter-header">
+            <div class="holter-header__title">
+                <span id="menu-sw" class="holter-header__menu-sw"><i class="fas fa-bars"></i></span>
+                <span class="hidable">Bienvenido
+                    <span id="user-name" class="holter-header__user-name">Joel Montalvo</span></span>
+                <span class="holter-header__holter-label">Holter</span>
+            </div>
+            <div class="holter-header__menu-options">
+                <ul class="holter-header__options-ul">
+                    <li id="holter-user-sw" class="holter-header__options-li">
+                        <a href="#"><i class="fas fa-user"></i></a>
+                        <div id="holter-user" class="holter-user hide">
+                            <img class="holter-user__photo" src="http://lorempixel.com/400/400/people/" alt="" />
+                            <h3 class="holter-user__name">Joel Montalvo</h3>
+                            <h3 class="holter-user__info">joelm@gmail.com</h3>
+                            <ul class="holter-user__menu">
+                                <li class="holter-user__li">
+                                    <i class="fas fa-user"></i>
+                                    <a href="index.html">Perfil de Usuario</a>
+                                </li>
+                                <li class="holter-user__li">
+                                    <i class="fas fa-sign-out-alt"></i>
+                                    <a href="../login.html">Cerrar sesión</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+
+
+                </ul>
+            </div>
+        </header>
+        <div class="body-container" data-simplebar>
+            <div id="main-flex-wrapper" class="full-main vertical-cards-wrapper">
+                <div id="solicitudes" class="card fade-animation  ">
+                    <div class="card__header">
+                        <h2 class="card__title">consultar ordenes</h2>
+
+                    </div>
+                    <div class="card__body">
+                        <div id="accordion">
+                            <div class="card">
+                                <div class="card-header" id="headingOne">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-link text-uppercase" data-toggle="collapse"
+                                            data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                            Orden #1
+                                        </button>
+                                    </h5>
+                                </div>
+
+                                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                                    data-parent="#accordion">
+                                    <div class="card-body">
+                                        <form>
+                                            <div class="row">
+                                                <div class="col-md-6 col-12">
+                                                    <textarea name="" placeholder="Comentarios" id="" class="w-100"
+                                                        rows="5"></textarea>
+                                                </div>
+                                                <div
+                                                    class="col-md-4 col-12 d-flex align-items-center justify-content-center">
+                                                    <div class="file-upload mr-3">
+                                                        <div class="file-upload-select">
+                                                            <div class="file-select-button">Resultados</div>
+                                                            <div class="file-select-name">Sin seleccionar...</div>
+                                                            <input type="file" name="file-upload-input"
+                                                                id="file-upload-input">
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-actions ta-right">
+                                                        <button id="send-request" type="button"
+                                                            class="holter-btn">Enviar</button>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3 col-12">
+
+                                                </div>
+                                            </div>
+                                        </form>
+
+                                        <table>
+                                            <thead>
+                                                <tr>
+                                                    <th>Fecha</th>
+                                                    <th>Hora</th>
+                                                    <th>Paciente</th>
+                                                    <th>Dirección</th>
+                                                    <th>Estado</th>
+                                                    <th></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="green">
+                                                    <td>05/07/2023</td>
+                                                    <td>02:45 AM</td>
+                                                    <td>Elias Colon</td>
+                                                    <td>C6678 // 2865 – 1215</td>
+                                                    <td><i class="far fa-check-circle"></i> Datos descargados</td>
+                                                    <td>
+                                                        <span id="detail-1"><i class="fas fa-eye"></i></span>
+
+                                                    </td>
+                                                </tr>
+                                                <tr class="green">
+                                                    <td>05/07/2023</td>
+                                                    <td>02:45 AM</td>
+                                                    <td>Elias Colon</td>
+                                                    <td>C6678 // 2865 – 1215</td>
+                                                    <td><i class="far fa-check-circle"></i> Datos descargados</td>
+                                                    <td>
+                                                        <span id="de2tail-1"><i class="fas fa-eye"></i></span>
+
+                                                    </td>
+                                                </tr>
+                                                <tr class="green">
+                                                    <td>05/07/2023</td>
+                                                    <td>02:45 AM</td>
+                                                    <td>Elias Colon</td>
+                                                    <td>C6678 // 2865 – 1215</td>
+                                                    <td><i class="far fa-check-circle"></i> Datos descargados</td>
+                                                    <td>
+                                                        <span id="det2ail-1"><i class="fas fa-eye"></i></span>
+
+                                                    </td>
+                                                </tr>
+                                                <tr class="green">
+                                                    <td>05/07/2023</td>
+                                                    <td>02:45 AM</td>
+                                                    <td>Elias Colon</td>
+                                                    <td>C6678 // 2865 – 1215</td>
+                                                    <td><i class="far fa-check-circle"></i> Datos descargados</td>
+                                                    <td>
+                                                        <span id="d2etail-1"><i class="fas fa-eye"></i></span>
+
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div id="detalle-solicitud" class="card fade-animation fade-hide-animation hide">
+                    <div class="card__header">
+                        <h2 class="card__title">Solicitud: Elias Colon</h2>
+                        <ul class="card__actions">
+
+                            <li id="close-details" class="card__btn-action">
+                                <i class="fas fa-times-circle"></i>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="card__body">
+                        <div class="fluid-container">
+                            <div class="col-4 pd-10">
+
+                                <p>
+                                    <span class="holter-emphasis">Tipo de Identificación: </span>
+                                    CC
+                                </p>
+                                <p><span class="holter-emphasis">Identificación: </span>
+                                    1000249494
+                                </p>
+                                <p><span class="holter-emphasis">Correo eectrónico: </span>
+                                    eliascolon98@gmail.com
+                                </p>
+                                <p><span class="holter-emphasis">Teléfono: </span>
+                                    385466115
+                                </p>
+                                <p><span class="holter-emphasis">Dirección: </span>
+                                    Calle 22 # 48-20
+                                </p>
+                                <p><span class="holter-emphasis">EPS: </span>
+                                    Sanitas
+                                </p>
+                            </div>
+                            <div class="col-4 pd-10">
+
+                                <p>
+                                    <a href=""><i class="fas fa-file-download"></i> Copia de cédula</a>
+                                </p>
+                                <p>
+                                    <a href=""><i class="fas fa-file-download"></i> Autorización de la EPS</a>
+                                </p>
+                                <p>
+                                    <a href=""><i class="fas fa-file-download"></i> Orden médica</a>
+                                </p>
+                                <p><span class="holter-emphasis">Tipo de estudio: </span>
+                                    xxxxxxx
+                                </p>
+                                <p><span class="holter-emphasis">Tipo de consulta: </span>
+                                    xxxxxx
+                                </p>
+                                <p><span class="holter-emphasis">Fecha de visita: </span>
+                                    05/07/2019 08:00 AM
+                                </p>
+
+                            </div>
+                            <div class="col-4 pd-10">
+                                <p><span class="holter-emphasis">Prioridad: </span>
+                                    Alta
+                                </p>
+                                <p>
+                                    <span class="holter-emphasis">Observaciones:<br /></span>
+                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt, quaerat quas? Fuga,
+                                    nemo et officiis voluptatum maxime repellat harum impedit quaerat ab esse
+                                    repudiandae vel amet qui molestias laboriosam est!
+                                </p>
+                            </div>
+                        </div>
+                        <div class="fluid-container">
+                            <div class="col-12">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Inicio</th>
+                                            <th>Final</th>
+                                            <th>Tecnico</th>
+                                            <th>Holter</th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="">
+                                            <td>05/07/2019 02:45 AM</td>
+                                            <td>05/07/2019 08:00 AM</td>
+                                            <td>Juan</td>
+                                            <td>xx3enk</td>
+                                            <td><i class="far fa-check-circle"></i></td>
+                                        </tr>
+                                        <tr class="">
+                                            <td>05/07/2019 02:45 AM</td>
+                                            <td>05/07/2019 08:00 AM</td>
+                                            <td>Juan</td>
+                                            <td>xx3enk</td>
+                                            <td><i class="far fa-check-circle"></i></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+    <div id="sidebar" class="sidebar">
+        <div class="sidebar__header">
+            <span class="sidebar__header__user-rol">Medico <i class="fas fa-caret-right"></i></span>
+        </div>
+        <div class="sidebar__menu">
+            <div class="sidebar__menu-set">
+                <ul class="sidebar__menu-set-ul">
+                    <li class="sidebar__menu-set-li">
+                        <a href="#"><i class="fas fa-home"></i>Inicio</a>
+                    </li>
+                    <li class="sidebar__menu-set-li sidebar__menu-set-li--active">
+                        <a href="index.html"><i class="fas fa-list-ul"></i>Enviar resultados</a>
+                    </li>
+                    <li class="sidebar__menu-set-li ">
+                        <a href="admin-history.html"><i class="fas fa-list-ul"></i>Hisotial de resultados</a>
+                    </li>
+                </ul>
+            </div>
+
+
+        </div>
+        <div class="sidebar__brand-container">
+            <div class="sidebar__copy">
+                Copyright &copy; 2023
+                <br />
+                Desarrollado por <span>Elias Colón</span>
+            </div>
+        </div>
+    </div>
+    <script src="../../js/jquery-3.6.4.min.js"></script>
+    <script src="../../js/sweetalert2@11"></script>
+    <script src="../../js/main.js"></script>
+    <script src="../../js//simplebar.js"></script>
+    <script src="../../js/rs-validator.js"></script>
+    <script src="../../js/request-manager.js"></script>
+    <script src="../../js/bootstrap.bundle.min.js"></script>
+    <script src="../../js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

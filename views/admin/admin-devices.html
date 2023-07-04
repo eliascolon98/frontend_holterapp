@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Holter</title>
+    <link rel="stylesheet" href="../../css/normalize.css" />
+    <link rel="stylesheet" href="../../assets/fonts/fontawesome-5.7.2/css/all.min.css" />
+    <link rel="stylesheet" href=../../css/simplebar.min.css" />
+    <link rel="stylesheet" href="../../css/holter-style.css" />
+    <link rel="stylesheet" href="../../css/layout-tools.css" />
+    <link rel="stylesheet" href="../../css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../../css/bootstrap-grid.min.css" />
+    <link rel="stylesheet" href="../../css/bootstrap-reboot.min.css" />
+    <link rel="stylesheet" href="sweetalert2.min.css">
+</head>
+
+<body class="">
+    <div class="main-wrapper">
+        <header id="holter-header" class="holter-header">
+            <div class="holter-header__title">
+                <span id="menu-sw" class="holter-header__menu-sw"><i class="fas fa-bars"></i></span>
+                <span class="hidable">Bienvenido
+                    <span id="user-name" class="holter-header__user-name">Joel Montalvo</span></span>
+                <span class="holter-header__holter-label">Holter</span>
+            </div>
+            <div class="holter-header__menu-options">
+                <ul class="holter-header__options-ul">
+                    <li id="holter-user-sw" class="holter-header__options-li">
+                        <a href="#"><i class="fas fa-user"></i></a>
+                        <div id="holter-user" class="holter-user hide">
+                            <img class="holter-user__photo" src="http://lorempixel.com/400/400/people/" alt="" />
+                            <h3 class="holter-user__name">Joel Montalvo</h3>
+                            <h3 class="holter-user__info">joelm@gmail.com</h3>
+                            <ul class="holter-user__menu">
+                                <li class="holter-user__li">
+                                    <i class="fas fa-user"></i>
+                                    <a href="../profile.html">Perfil de Usuario</a>
+                                </li>
+                                <li class="holter-user__li">
+                                    <i class="fas fa-sign-out-alt"></i>
+                                    <a href="../login.html">Cerrar sesión</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+
+
+                </ul>
+            </div>
+        </header>
+        <div class="body-container" data-simplebar>
+            <div id="main-flex-wrapper" class="full-main vertical-cards-wrapper">
+                <div id="solicitudes" class="card fade-animation  ">
+                    <div class="card__header">
+                        <h2 class="card__title">Administrar dispositivos</h2>
+                        <ul class="card__actions">
+                            <li id="new-request" class="card__btn-action">
+                                <i class="fas fa-plus-circle"></i>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="card__body">
+                        <div class="row">
+                            <div class="col-md-6 col-12">
+                                <div class="input-wrapper">
+                                    <span class="input-wrapper__icon"><i class="fas fa-font"
+                                            aria-hidden="true"></i></span>
+                                    <input class="input-wrapper__input" type="text" placeholder="Filtrar datos">
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-12">
+                                <select id="inputState" class="form-control">
+                                    <option selected="">Estado</option>
+                                    <option>Activo</option>
+                                    <option>Inactivo</option>
+
+                                </select>
+                            </div>
+
+
+                        </div>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Nombre</th>
+                                    <th>Inventario</th>
+                                    <th>Equipo</th>
+                                    <th>Marca</th>
+                                    <th>Referencia</th>
+                                    <th>Estado</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="">
+                                    <td>0800</td>
+                                    <td>Holter de ritmo cardiaco</td>
+                                    <td>EDAN</td>
+                                    <td>SE-2003</td>
+                                    <td> 360483-M16508580010</td>
+                                    <td> Activo</td>
+                                    <td>
+                                        <span id="detail-1"><i class="fas fa-eye"></i></span>
+                                        <span id="update-patient"><i class="fas fa-pencil-alt"></i></span>
+                                        <span id="delete-patient"><i class="fas fa-trash-alt"></i></span>
+                                    </td>
+                                </tr>
+
+                                <tr class="">
+                                    <td>0801</td>
+                                    <td>Holter de ritmo cardiaco</td>
+                                    <td>EDAN</td>
+                                    <td>SE-2003</td>
+                                    <td> 360483-M16508580010</td>
+                                    <td> Activo</td>
+                                    <td>
+                                        <span id="detail-1"><i class="fas fa-eye"></i></span>
+                                        <span id="update-patient"><i class="fas fa-pencil-alt"></i></span>
+                                        <span id="delete-patient"><i class="fas fa-trash-alt"></i></span>
+                                    </td>
+                                </tr>
+                                <tr class="">
+                                    <td>0800</td>
+                                    <td>Monitor de presion arterial</td>
+                                    <td>SUN TECH</td>
+                                    <td>bravo mini</td>
+                                    <td> 133888</td>
+                                    <td> Activo</td>
+                                    <td>
+                                        <span id="detail-1"><i class="fas fa-eye"></i></span>
+                                        <span id="update-patient"><i class="fas fa-pencil-alt"></i></span>
+                                        <span id="delete-patient"><i class="fas fa-trash-alt"></i></span>
+                                    </td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                        <nav aria-label="Page navigation example">
+                            <ul class="pagination">
+                                <li class="page-item">
+                                    <a class="page-link" href="#" aria-label="Previous">
+                                        <span aria-hidden="true">«</span>
+                                        <span class="sr-only">Previous</span>
+                                    </a>
+                                </li>
+                                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#" aria-label="Next">
+                                        <span aria-hidden="true">»</span>
+                                        <span class="sr-only">Next</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+
+                </div>
+
+                <div id="detalle-solicitud" class="card fade-animation fade-hide-animation hide">
+                    <div class="card__header">
+                        <h2 class="card__title">Holter</h2>
+                        <ul class="card__actions">
+
+                            <li id="close-details" class="card__btn-action">
+                                <i class="fas fa-times-circle"></i>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="card__body">
+                        <div class="fluid-container">
+                            <div class="col-md-4  col-6 pd-10">
+
+                                <p>
+                                    <span class="holter-emphasis">Tipo de dispositivo: </span>
+                                    Holter
+                                </p>
+                                <p><span class="holter-emphasis">Inventario: </span>
+                                    08087
+                                </p>
+                                <p><span class="holter-emphasis">Nombre: </span>
+                                    Holter
+                                </p>
+
+                            </div>
+                            <div class="col-md-4  col-6 pd-10">
+                                <p><span class="holter-emphasis">Marca: </span>
+                                    EDAN
+                                </p>
+                                <p><span class="holter-emphasis">Modelo: </span>
+                                    S3 sadkasdkjsd
+                                </p>
+                                <p><span class="holter-emphasis">Referencia: </span>
+                                    add5as46da4s6
+                                </p>
+
+                            </div>
+                            <div class="col-md-4  col-12 pd-10">
+                                <p><span class="holter-emphasis">Registro sanitario: </span>
+                                    add5as46da4s6
+                                </p>
+                                <p><span class="holter-emphasis">Departamento: </span>
+                                    Sanitas
+                                </p>
+                                <p><span class="holter-emphasis">Ciudad: </span>
+                                    xxxxxxx
+                                </p>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div id="nueva-solicitud" class="card fade-animation fade-hide-animation hide">
+                    <div class="card__header">
+                        <h2 class="card__title">Agregar nuevo dispositivo:</h2>
+                        <ul class="card__actions">
+                            <li id="close-new-request" class="card__btn-action">
+                                <i class="fas fa-times-circle"></i>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="card__body">
+                        <div class="fluid-container">
+                            <div class="col-md-4 col-12 pd-10">
+                                <div class="input-wrapper">
+                                    <span class="input-wrapper__icon"><i class="fas fa-circle"></i></span>
+                                    <select name="" id="supplier" class="input-wrapper__input">
+                                        <option value="NONE">Tipo de dispositivo</option>
+                                        <option value="1">Holter</option>
+                                        <option value="2">MAPA</option>
+
+                                    </select>
+                                </div>
+                                <div class="input-wrapper">
+                                    <span class="input-wrapper__icon"><i class="fas fa-circle"></i></span>
+                                    <input class="input-wrapper__input" type="text" placeholder="Inventario" />
+                                </div>
+                                <div class="input-wrapper">
+                                    <span class="input-wrapper__icon"><i class="fas fa-circle"></i></span>
+                                    <input class="input-wrapper__input" type="text" placeholder="Nombre" />
+                                </div>
+
+
+                            </div>
+                            <div class="col-md-4 col-12 pd-10">
+                                <div class="input-wrapper">
+                                    <span class="input-wrapper__icon"><i class="fas fa-circle"></i></span>
+                                    <input class="input-wrapper__input" type="text" placeholder="Marca" />
+                                </div>
+                                <div class="input-wrapper">
+                                    <span class="input-wrapper__icon"><i class="fas fa-circle"></i></span>
+                                    <input class="input-wrapper__input" type="text" placeholder="Modelo" />
+                                </div>
+                                <div class="input-wrapper">
+                                    <span class="input-wrapper__icon"><i class="fas fa-circle"></i></span>
+                                    <input class="input-wrapper__input" type="text" placeholder="Referencia" />
+                                </div>
+
+
+                            </div>
+                            <div class="col-md-4 col-12 pd-10">
+                                <div class="input-wrapper">
+                                    <span class="input-wrapper__icon"><i class="fas fa-circle"></i></span>
+                                    <input class="input-wrapper__input" type="text" placeholder="Registro sanitario" />
+                                </div>
+                                <div class="input-wrapper">
+                                    <span class="input-wrapper__icon"><i class="fas fa-circle"></i></span>
+
+                                    <select name="" id="supplier" class="input-wrapper__input">
+                                        <option value="">Departamento</option>
+                                        <option value="1">Bolivar</option>
+                                        <option value="2">Sucre</option>
+                                        <option value="3">Antioquia</option>
+                                    </select>
+                                </div>
+                                <div class="input-wrapper">
+                                    <span class="input-wrapper__icon"><i class="fas fa-circle"></i></span>
+
+                                    <select name="" id="supplier" class="input-wrapper__input">
+                                        <option value="">Ciudad</option>
+                                        <option value="1">Magangué</option>
+                                        <option value="2">Sincelejo</option>
+                                        <option value="3">Barranquilla</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-actions ta-right">
+                            <button id="save-request" type="button" class="holter-btn">Guardar dispositivo</button>
+                        </div>
+                    </div>
+                </div>
+                <div id="actualizar-solicitud" class="card fade-animation fade-hide-animation hide">
+                    <div class="card__header">
+                        <h2 class="card__title">Nueva Solicitud:</h2>
+                        <ul class="card__actions">
+                            <li id="close-new-request-2" class="card__btn-action">
+                                <i class="fas fa-times-circle"></i>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="card__body">
+                        <div class="fluid-container">
+                            <div class="col-md-4 col-12 pd-10">
+                                <div class="input-wrapper">
+                                    <span class="input-wrapper__icon"><i class="fas fa-circle"></i></span>
+                                    <select name="" id="supplier" class="input-wrapper__input">
+                                        <option value="NONE">Tipo de dispositivo</option>
+                                        <option value="1" selected>Holter</option>
+                                        <option value="2">MAPA</option>
+
+                                    </select>
+                                </div>
+                                <div class="input-wrapper">
+                                    <span class="input-wrapper__icon"><i class="fas fa-circle"></i></span>
+                                    <input class="input-wrapper__input" type="text" value="xsdasdas"
+                                        placeholder="Inventario" />
+                                </div>
+                                <div class="input-wrapper">
+                                    <span class="input-wrapper__icon"><i class="fas fa-circle"></i></span>
+                                    <input class="input-wrapper__input" type="text" value="xsdasdas"
+                                        placeholder="Nombre" />
+                                </div>
+
+
+                            </div>
+                            <div class="col-md-4 col-12 pd-10">
+                                <div class="input-wrapper">
+                                    <span class="input-wrapper__icon"><i class="fas fa-circle"></i></span>
+                                    <input class="input-wrapper__input" type="text" value="xsdasdas"
+                                        placeholder="Marca" />
+                                </div>
+                                <div class="input-wrapper">
+                                    <span class="input-wrapper__icon"><i class="fas fa-circle"></i></span>
+                                    <input class="input-wrapper__input" type="text" value="xsdasdas"
+                                        placeholder="Modelo" />
+                                </div>
+                                <div class="input-wrapper">
+                                    <span class="input-wrapper__icon"><i class="fas fa-circle"></i></span>
+                                    <input class="input-wrapper__input" type="text" value="xsdasdas"
+                                        placeholder="Referencia" />
+                                </div>
+
+
+                            </div>
+                            <div class="col-md-4 col-12 pd-10">
+                                <div class="input-wrapper">
+                                    <span class="input-wrapper__icon"><i class="fas fa-circle"></i></span>
+                                    <input class="input-wrapper__input" type="text" value="xsdasdas"
+                                        placeholder="Registro sanitario" />
+                                </div>
+                                <div class="input-wrapper">
+                                    <span class="input-wrapper__icon"><i class="fas fa-circle"></i></span>
+
+                                    <select name="" id="supplier" class="input-wrapper__input">
+                                        <option value="">Departamento</option>
+                                        <option value="1" selectd>Bolivar</option>
+                                        <option value="2">Sucre</option>
+                                        <option value="3">Antioquia</option>
+                                    </select>
+                                </div>
+                                <div class="input-wrapper">
+                                    <span class="input-wrapper__icon"><i class="fas fa-circle"></i></span>
+
+                                    <select name="" id="supplier" class="input-wrapper__input">
+                                        <option value="">Ciudad</option>
+                                        <option value="1" selected>Magangué</option>
+                                        <option value="2">Sincelejo</option>
+                                        <option value="3">Barranquilla</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-actions ta-right">
+                            <button id="update-request" type="button" class="holter-btn">Actualizar datos</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="sidebar" class="sidebar">
+        <div class="sidebar__header">
+            <span class="sidebar__header__user-rol">Aministradir <i class="fas fa-caret-right"></i></span>
+        </div>
+        <div class="sidebar__menu">
+            <div class="sidebar__menu-set">
+                <ul class="sidebar__menu-set-ul">
+                    <li class="sidebar__menu-set-li">
+                        <a href="#"><i class="fas fa-home"></i>Inicio</a>
+                    </li>
+                    <li class="sidebar__menu-set-li ">
+                        <a href="index.html"><i class="fas fa-list-ul"></i>Ordenes </a>
+                    </li>
+                    <li class="sidebar__menu-set-li ">
+                        <a href="admin-users.html"><i class="fas fa-list-ul"></i>Administrar usuarios</a>
+                    </li>
+
+                    <li class="sidebar__menu-set-li sidebar__menu-set-li--active">
+                        <a href="admin-devices.html"><i class="fas fa-list-ul"></i>Dispositivos</a>
+                    </li>
+                </ul>
+            </div>
+
+
+        </div>
+        <div class="sidebar__brand-container">
+            <div class="sidebar__copy">
+                Copyright &copy; 2023
+                <br />
+                Desarrollado por <span>Elias Colón</span>
+            </div>
+        </div>
+    </div>
+    <script src="../../js/jquery-3.6.4.min.js"></script>
+    <script src="../../js/main.js"></script>
+    <script src="../../js//simplebar.js"></script>
+    <script src="../../js/rs-validator.js"></script>
+    <script src="../../js/request-manager.js"></script>
+    <script src="../../js/sweetalert2@11.js"></script>
+    <script src="../../js/bootstrap.bundle.min.js"></script>
+    <script src="../../js/bootstrap.min.js"></script>
+
+
+
+</body>
+
+</html>
